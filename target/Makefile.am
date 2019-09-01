@@ -36,6 +36,7 @@ pkgdata_DATA = \
 	mc9s12c64.dat \
 	mc9s12c96.dat \
 	mc9s12c128.dat \
+	mc9s12g128.dat \
 	mc9s12gc16.dat \
 	mc9s12gc32.dat \
 	mc9s12gc64.dat \
@@ -50,7 +51,8 @@ pkgdata_DATA = \
 	mc9s12ne64.dat \
 	mc9s12uf32.dat \
 	mc9s12xd256.dat \
-	mc9s12xd512.dat
+	mc9s12xd512.dat \
+	mc9s12xs128.dat
 
 EXTRA_DIST = $(pkgdata_DATA) \
 	agent.h \

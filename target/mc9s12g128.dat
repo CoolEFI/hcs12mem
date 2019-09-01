@@ -1,5 +1,5 @@
 # hcs12mem - HC12/S12 memory reader & writer
-# mc9s12xs128.dat: target description - single chip MC9S12XS128 MCU
+# mc9s12g128.dat: target description - single chip MC9S12G128 MCU
 # Copyright (C) 2019 Andy Goss <agoss@coolefi.com>
 #
 # Copyright (C) 2005,2006,2007 Michal Konieczny <mk@cml.mfk.net.pl>
@@ -18,13 +18,14 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-info single chip MC9S12XS128 MCU
+info single chip MC9S12G128 MCU
 
-mcu MC9S12XS128
-family S12X
-ram_size 0x3800
-eeprom_module EETX2K
-flash_module FTX128K1
+mcu MC9S12G128
+family S12
+ram_size 0x2000
+#eeprom_module EETX4K
+eeprom_module NONE
+flash_module FTMRG128K1
 
 #bdm_startup_delay 100
 #bdm_agent bdm.s19
