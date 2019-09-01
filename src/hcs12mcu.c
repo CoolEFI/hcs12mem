@@ -38,11 +38,10 @@ static const char *hcs12_family_table[] =
 	"unknown1",
 	"unknown2",
 	"unknown3",
-	"XD",
+	"X",
 	"unknown4",
 	"unknown5",
-	"unknown6",
-	"unknown7"
+	"G"
 };
 
 static uint16_t hcs12_reg_space_table[] =
