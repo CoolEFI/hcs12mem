@@ -35,13 +35,14 @@ static const char *hcs12_family_table[] =
 	"U",
 	"reserved",
 	"NE",
-	"unknown",
-	"unknown",
-	"unknown",
+	"unknown1",
+	"unknown2",
+	"unknown3",
 	"XD",
-	"unknown",
-	"unknown",
-	"unknown"
+	"unknown4",
+	"unknown5",
+	"unknown6",
+	"unknown7"
 };
 
 static uint16_t hcs12_reg_space_table[] =
@@ -207,6 +208,7 @@ hcs12_flash_module_table[] =
 	{ "FTX128K1",  HCS12_FLASH_MODULE_FTX128K1, 2, 1, 128 * 1024, 1024, 0xc000, 0x4000, 0xf8,  8,    0, 0 },
 	{ "FTX256K2",  HCS12_FLASH_MODULE_FTX256K2, 2, 2, 256 * 1024, 1024, 0xc000, 0x4000, 0xe0,  8, 0xf0, 8 },
 	{ "FTX512K4",  HCS12_FLASH_MODULE_FTX512K4, 2, 4, 512 * 1024, 1024, 0xc000, 0x4000, 0xe0, 32,    0, 0 },
+	{ "FTMRG128K1",HCS12_FLASH_MODULE_FTMRG128K1,2,1, 128 * 1024, 1024, 0xc000, 0x4000, 0x08,  8,    0, 0 },
 	{ NULL,        HCS12_FLASH_MODULE_UNKNOWN,  0, 0,          0,    0,      0,      0,    0,  0,    0, 0 }
 };
 
