@@ -22,8 +22,11 @@ H128, H256,
 UF32,
 NE64.
 
+Andy trying to add support for G128 and XS128 MCUs.
+
 Installation:
 
+Linux:
 tar -xzf <hcs12mem-x.x.tar.gz>
 cd hcs12mem-x.x
 ./configure
@@ -32,6 +35,14 @@ su
 make install
 
 Under FreeBSD, use gmake instead of make.
+
+Windows/cygwin:
+cd hcs12mem
+bash autogen
+bash configure
+make
+make install
+
 
 For successful compilation, installation of GNU gcc for HC11/HC12 is not
 required anymore, because target agents are included in S-record files form.
@@ -43,5 +54,3 @@ For usage help, see `man hcs12mem`
 http://cml.mfk.net.pl/hcs12mem
 
 (C) 2005,2006,2007 Michal Konieczny <mk@cml.mfk.net.pl>
-
-$Id$
