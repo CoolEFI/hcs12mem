@@ -30,7 +30,7 @@ XS128.
 To use with MCUs other that the XEP100 and XS128, you have to edit src/hcs12mcu.h and change line 83 to:
 #define HCS12_IO_PPAGE 0x0030 // For XDP512 and C64/C128 = 0x0030
 
-Andy added support for XEP100 and XS128 MCUs, but you have to edit src/hcs12mcu.h and change line 83 to:
+Andy added support for XEP100 and XS128 MCUs, I already edited src/hcs12mcu.h and changed line 83 to:
 #define HCS12_IO_PPAGE 0x0015 // For XEP100 and XS128 = 0x0015
 
 Then follow the Installation steps.
@@ -47,7 +47,7 @@ Installation:
   Under FreeBSD, use gmake instead of make.
 
   To compile/use with Windows you will need Cygwin with autogen, automake, configure, gcc and make packages installed.
-  
+
   Windows/Cygwin terminal:
     cd hcs12mem
     bash autogen
