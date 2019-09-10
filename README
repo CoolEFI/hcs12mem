@@ -67,8 +67,9 @@ To export the memory contents in Linux:
         tty
         ttyS8     {this is a serial port}
         ttyUSB0   {this is a usb to serial port}
-   5. To export the contents of the flash memory type:
-      ./hcs12mem.exe -p /dev/ttyS8 -b 115200 -i sm -t mc9s12xep100 -a banked-ppage --flash-read xep100.export.ppage.s19
+   5. The hcs12mem file is in the "src" directory, so type: cd src
+   6. To export the contents of the flash memory type:
+      ./hcs12mem -p /dev/ttyS8 -b 115200 -i sm -t mc9s12xep100 -a banked-ppage --flash-read xep100.export.ppage.s19
 
 
 To export the memory contents in Windows/cygwin:
@@ -79,7 +80,8 @@ To export the memory contents in Windows/cygwin:
         $ ls /dev | grep tty
         tty
         ttyS8
-   5. To export the contents of the flash memory type:
+   5. The hcs12mem file is in the "src" directory, so type: cd src
+   6. To export the contents of the flash memory type:
       ./hcs12mem.exe -p /dev/ttyS8 -b 115200 -i sm -t mc9s12xep100 -a banked-ppage --flash-read xep100.export.ppage.s19
 
 -----
