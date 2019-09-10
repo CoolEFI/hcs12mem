@@ -193,22 +193,23 @@ static const struct
 }
 hcs12_flash_module_table[] =
 {
-	/* name        type           fsec_keyen_bits, blocks   size sector  lsize   lbase ppbase1 ppcnt1 ppbase2 ppcnt2 */
-	{ "NONE",      HCS12_FLASH_MODULE_NONE,     0, 0,          0,    0,      0,      0,    0,  0,    0, 0 },
-	{ "OTHER",     HCS12_FLASH_MODULE_OTHER,    0, 0,          0,    0,      0,      0,    0,  0,    0, 0 },
-	{ "FTS16K",    HCS12_FLASH_MODULE_FTS16K,   2, 1,  16 * 1024,  512, 0x4000, 0xc000, 0x3f,  1,    0, 0 },
-	{ "FTS32K",    HCS12_FLASH_MODULE_FTS32K,   2, 1,  32 * 1024,  512, 0x8000, 0x8000, 0x3e,  2,    0, 0 },
-	{ "FTS64K",    HCS12_FLASH_MODULE_FTS64K,   1, 1,  64 * 1024,  512, 0xc000, 0x4000, 0x3c,  4,    0, 0 },
-	{ "FTS64KV4",  HCS12_FLASH_MODULE_FTS64K,   2, 1,  64 * 1024,  512, 0xc000, 0x4000, 0x3c,  4,    0, 0 },
-	{ "FTS128K",   HCS12_FLASH_MODULE_FTS128K,  2, 2, 128 * 1024,  512, 0xc000, 0x4000, 0x38,  8,    0, 0 },
-	{ "FTS128K1",  HCS12_FLASH_MODULE_FTS128K1, 2, 1, 128 * 1024, 1024, 0xc000, 0x4000, 0x38,  8,    0, 0 },
-	{ "FTS256K",   HCS12_FLASH_MODULE_FTS256K,  1, 4, 256 * 1024,  512, 0xc000, 0x4000, 0x30, 16,    0, 0 },
-	{ "FTS512K4",  HCS12_FLASH_MODULE_FTS512K4, 2, 4, 512 * 1024, 1024, 0xc000, 0x4000, 0x20, 32,    0, 0 },
-	{ "FTX128K1",  HCS12_FLASH_MODULE_FTX128K1, 2, 1, 128 * 1024, 1024, 0xc000, 0x4000, 0xf8,  8,    0, 0 },
-	{ "FTX256K2",  HCS12_FLASH_MODULE_FTX256K2, 2, 2, 256 * 1024, 1024, 0xc000, 0x4000, 0xe0,  8, 0xf0, 8 },
-	{ "FTX512K4",  HCS12_FLASH_MODULE_FTX512K4, 2, 4, 512 * 1024, 1024, 0xc000, 0x4000, 0xe0, 32,    0, 0 },
-	{ "FTMRG128K1",HCS12_FLASH_MODULE_FTMRG128K1,2,1, 128 * 1024, 1024, 0xc000, 0x4000, 0x08,  8,    0, 0 },
-	{ NULL,        HCS12_FLASH_MODULE_UNKNOWN,  0, 0,          0,    0,      0,      0,    0,  0,    0, 0 }
+	/* name,       type,           fsec_keyen_bits, blocks,        size, sector,  lsize,  lbase, ppbase1, ppcnt1, ppbase2, ppcnt2 */
+	{ "NONE",      HCS12_FLASH_MODULE_NONE,      0,      0,           0,      0,      0,      0,       0,      0,       0,      0 },
+	{ "OTHER",     HCS12_FLASH_MODULE_OTHER,     0,      0,           0,      0,      0,      0,       0,      0,       0,      0 },
+	{ "FTS16K",    HCS12_FLASH_MODULE_FTS16K,    2,      1,   16 * 1024,    512, 0x4000, 0xc000,    0x3f,      1,       0,      0 },
+	{ "FTS32K",    HCS12_FLASH_MODULE_FTS32K,    2,      1,   32 * 1024,    512, 0x8000, 0x8000,    0x3e,      2,       0,      0 },
+	{ "FTS64K",    HCS12_FLASH_MODULE_FTS64K,    1,      1,   64 * 1024,    512, 0xc000, 0x4000,    0x3c,      4,       0,      0 },
+	{ "FTS64KV4",  HCS12_FLASH_MODULE_FTS64K,    2,      1,   64 * 1024,    512, 0xc000, 0x4000,    0x3c,      4,       0,      0 },
+	{ "FTS128K",   HCS12_FLASH_MODULE_FTS128K,   2,      2,  128 * 1024,    512, 0xc000, 0x4000,    0x38,      8,       0,      0 },
+	{ "FTS128K1",  HCS12_FLASH_MODULE_FTS128K1,  2,      1,  128 * 1024,   1024, 0xc000, 0x4000,    0x38,      8,       0,      0 },
+	{ "FTS256K",   HCS12_FLASH_MODULE_FTS256K,   1,      4,  256 * 1024,    512, 0xc000, 0x4000,    0x30,     16,       0,      0 },
+	{ "FTS512K4",  HCS12_FLASH_MODULE_FTS512K4,  2,      4,  512 * 1024,   1024, 0xc000, 0x4000,    0x20,     32,       0,      0 },
+	{ "FTX128K1",  HCS12_FLASH_MODULE_FTX128K1,  2,      1,  128 * 1024,   1024, 0xc000, 0x4000,    0xf8,      8,       0,      0 },
+	{ "FTX256K2",  HCS12_FLASH_MODULE_FTX256K2,  2,      2,  256 * 1024,   1024, 0xc000, 0x4000,    0xe0,      8,    0xf0,      8 },
+	{ "FTX512K4",  HCS12_FLASH_MODULE_FTX512K4,  2,      4,  512 * 1024,   1024, 0xc000, 0x4000,    0xe0,     32,       0,      0 },
+	{ "FTMRG128K1",HCS12_FLASH_MODULE_FTMRG128K1,2,      2,  128 * 1024,   1024, 0xc000, 0x4000,    0x08,      8,       0,      0 },
+        { "FTM1024K51",HCS12_FLASH_MODULE_FTM1024K5, 2,      5, 1024 * 1024,   1024, 0xc000, 0x4000,    0xc0,     64,       0,      0 },
+	{ NULL,        HCS12_FLASH_MODULE_UNKNOWN,   0,      0,           0,      0,      0,      0,       0,      0,       0,      0 }
 };
 
 hcs12mcu_target_t hcs12mcu_target;

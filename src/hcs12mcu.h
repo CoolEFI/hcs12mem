@@ -57,6 +57,7 @@
 #define HCS12_FLASH_MODULE_FTX256K2 11
 #define HCS12_FLASH_MODULE_FTX512K4 12
 #define HCS12_FLASH_MODULE_FTMRG128K1 13
+#define HCS12_FLASH_MODULE_FTM1024K5 14
 
 /* HCS12 I/O registers and bit flags */
 
@@ -79,7 +80,8 @@
 #define HCS12_IO_MEMSIZ_RAM_SW        0x0700
 #define HCS12_IO_MEMSIZ_ROM_SW        0x00c0
 #define HCS12_IO_MEMSIZ_PAG_SW        0x0003
-#define HCS12_IO_PPAGE          0x0030
+#define HCS12_IO_PPAGE          0x0015 // For XEP100 and XS128 = 0x0015
+//#define HCS12_IO_PPAGE          0x0030 // For XDP512 and C64/C128 = 0x0030
 
 /* HCS12X I/O registers and bit flags */
 

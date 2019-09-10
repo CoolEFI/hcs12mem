@@ -52,6 +52,8 @@ pkgdata_DATA = \
 	mc9s12uf32.dat \
 	mc9s12xd256.dat \
 	mc9s12xd512.dat \
+	mc9s12xdp512.dat \
+	mc9s12xep100.dat \
 	mc9s12xs128.dat
 
 EXTRA_DIST = $(pkgdata_DATA) \
