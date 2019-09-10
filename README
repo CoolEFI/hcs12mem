@@ -20,29 +20,69 @@ D32, D64, D128, D256, D512,
 E32, E64, E128, E256,
 H128, H256,
 UF32,
-NE64.
+NE64,
+XDP512,
+XEP100,
+XS128.
 
-Andy trying to add support for G128 and XS128 MCUs.
+-----
+
+To use with MCUs other that the XEP100 and XS128, you have to edit src/hcs12mcu.h and change line 83 to:
+#define HCS12_IO_PPAGE 0x0030 // For XDP512 and C64/C128 = 0x0030
+
+Andy added support for XEP100 and XS128 MCUs, but you have to edit src/hcs12mcu.h and change line 83 to:
+#define HCS12_IO_PPAGE 0x0015 // For XEP100 and XS128 = 0x0015
+
+Then follow the Installation steps.
 
 Installation:
 
-Linux:
-tar -xzf <hcs12mem-x.x.tar.gz>
-cd hcs12mem-x.x
-./configure
-make
-su
-make install
+  Linux:
+    cd hcs12mem
+    ./configure
+    make
+    su
+    make install
 
-Under FreeBSD, use gmake instead of make.
+  Under FreeBSD, use gmake instead of make.
 
-Windows/cygwin:
-cd hcs12mem
-bash autogen
-bash configure
-make
-make install
+  To compile/use with Windows you will need Cygwin with autogen, automake, configure, gcc and make packages installed.
+  
+  Windows/Cygwin terminal:
+    cd hcs12mem
+    bash autogen
+    bash configure
+    make
+    make install
 
+-----
+
+Usage:
+To export the memory contents in Linux:
+  1. Plug in the MCU to a serial port or USB to serial adapter.
+  2. Open a terminal window.
+  3. To find the communications port type: ls /dev | grep tty
+  4. It should show you something like:
+        $ ls /dev | grep tty
+        tty
+        ttyS8     {this is a serial port}
+        ttyUSB0   {this is a usb to serial port}
+   5. To export the contents of the flash memory type:
+      ./hcs12mem.exe -p /dev/ttyS8 -b 115200 -i sm -t mc9s12xep100 -a banked-ppage --flash-read xep100.export.ppage.s19
+
+
+To export the memory contents in Windows/cygwin:
+  1. Plug in the MCU to a serial port or USB to serial adapter.
+  2. Open Cygwin Terminal.
+  3. To find the communications port type: ls /dev | grep tty
+  4. It should show you something like:
+        $ ls /dev | grep tty
+        tty
+        ttyS8
+   5. To export the contents of the flash memory type:
+      ./hcs12mem.exe -p /dev/ttyS8 -b 115200 -i sm -t mc9s12xep100 -a banked-ppage --flash-read xep100.export.ppage.s19
+
+-----
 
 For successful compilation, installation of GNU gcc for HC11/HC12 is not
 required anymore, because target agents are included in S-record files form.
